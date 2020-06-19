@@ -11,14 +11,14 @@ import javax.swing.JOptionPane;
  *
  * @author Sergio Sotter
  */
-public class viewPF extends javax.swing.JInternalFrame {
-    
+public class viewPJ extends javax.swing.JInternalFrame {
+
     Agenda agenda = new Agenda();
     
     /**
-     * Creates new form viewPF
+     * Creates new form viewPJ
      */
-    public viewPF() {
+    public viewPJ() {
         initComponents();
     }
 
@@ -31,46 +31,38 @@ public class viewPF extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         tfNome = new javax.swing.JTextField();
         tfFone = new javax.swing.JFormattedTextField();
-        tfCpf = new javax.swing.JFormattedTextField();
+        tfCnpj = new javax.swing.JFormattedTextField();
         tfEmail = new javax.swing.JTextField();
         btnSalvar = new javax.swing.JButton();
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jLabel2 = new javax.swing.JLabel();
 
         setClosable(true);
-        setTitle("Cadastro de Pessoa Física");
+        setTitle("Cadastro de Pessoa Jurídica");
         setPreferredSize(new java.awt.Dimension(380, 330));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Cadastro de Pessoa Física");
+        jLabel1.setText("Cadastro de Pessoa Jurídica");
 
-        jLabel2.setText("Nome:");
-
-        jLabel3.setText("Celular:");
+        jLabel3.setText("Telefone:");
 
         jLabel4.setText("Email:");
 
-        jLabel5.setText("CPF:");
+        jLabel5.setText("CNPJ");
 
         try {
-            tfFone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) #####-####")));
+            tfFone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) ####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
 
         try {
-            tfCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+            tfCnpj.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###/####-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -82,35 +74,38 @@ public class viewPF extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel2.setText("Nome:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnSalvar)
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tfNome)
-                            .addComponent(tfFone, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-                            .addComponent(tfCpf)
-                            .addComponent(tfEmail)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnSalvar)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel3)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel4)
+                                .addComponent(jLabel5))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(tfNome)
+                                .addComponent(tfFone)
+                                .addComponent(tfCnpj)
+                                .addComponent(tfEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -127,10 +122,10 @@ public class viewPF extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(tfCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnSalvar)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
@@ -141,18 +136,17 @@ public class viewPF extends javax.swing.JInternalFrame {
         String nome = tfNome.getText();
         String fone = tfFone.getText();
         String email = tfEmail.getText();
-        String cpf = tfCpf.getText();
-        
-        Fisica f = new Fisica(nome, fone, email, cpf);
-        
-        agenda.cadastraFisica(f);
-        
-        System.out.println(f);
-        
-        JOptionPane.showMessageDialog(this, "Contato cadastrado com sucesso!");
-        
-        viewPF.this.dispose();
+        String cnpj = tfCnpj.getText();
 
+        Juridica j = new Juridica(nome, fone, email, cnpj);
+
+        agenda.cadastraJuridica(j);
+
+        System.out.println(j);
+
+        JOptionPane.showMessageDialog(this, "Contato cadastrado com sucesso!");
+
+        viewPJ.this.dispose();
     }//GEN-LAST:event_btnSalvarActionPerformed
 
 
@@ -163,9 +157,7 @@ public class viewPF extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JFormattedTextField tfCpf;
+    private javax.swing.JFormattedTextField tfCnpj;
     private javax.swing.JTextField tfEmail;
     private javax.swing.JFormattedTextField tfFone;
     private javax.swing.JTextField tfNome;

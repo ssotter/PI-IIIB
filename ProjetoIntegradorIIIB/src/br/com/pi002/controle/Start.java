@@ -10,6 +10,8 @@ package br.com.pi002.controle;
  * @author Sergio Sotter
  */
 public class Start extends javax.swing.JFrame {
+    
+    // PosicaoFormulario form = new PosicaoFormulario();
 
     /**
      * Creates new form Start
@@ -65,7 +67,7 @@ public class Start extends javax.swing.JFrame {
         jLabel3.setText("Análise e Desenvolvimento de Sistemas");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Universisdade Católica de Pelotas - 2020");
+        jLabel4.setText("Universidade Católica de Pelotas - 2020");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -73,9 +75,9 @@ public class Start extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Desktop)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(36, 36, 36)
                 .addComponent(jLabel1)
-                .addGap(56, 56, 56)
+                .addGap(39, 39, 39)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -88,15 +90,16 @@ public class Start extends javax.swing.JFrame {
                 .addComponent(Desktop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel4))))
+                        .addComponent(jLabel4)
+                        .addGap(25, 25, 25))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1))))
         );
 
         jMenu1.setText("Sistema");
@@ -162,8 +165,14 @@ public class Start extends javax.swing.JFrame {
     }//GEN-LAST:event_PFisicaActionPerformed
 
     private void PJuridicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PJuridicaActionPerformed
-
-        new TelaJuridica().setVisible(true);
+       viewPJ tela = new viewPJ();
+       Desktop.add(tela);
+       tela.setVisible(true);
+    
+    //    viewPJ tela;
+    //    form.abrirFormulario(tela = new viewPJ(), Desktop);
+    
+    //    new TelaJuridica().setVisible(true);
         
     }//GEN-LAST:event_PJuridicaActionPerformed
 
