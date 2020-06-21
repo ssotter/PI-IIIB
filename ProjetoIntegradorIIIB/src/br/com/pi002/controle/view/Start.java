@@ -1,17 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package br.com.pi002.controle;
+package br.com.pi002.controle.view;
 
-/**
- *
- * @author Sergio Sotter
- */
+import br.com.pi002.controle.Fisica;
+
 public class Start extends javax.swing.JFrame {
     
-    // PosicaoFormulario form = new PosicaoFormulario();
+    Fisica f;
+    
 
     /**
      * Creates new form Start
@@ -29,6 +23,9 @@ public class Start extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         Desktop = new javax.swing.JDesktopPane();
@@ -41,11 +38,19 @@ public class Start extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         PFisica = new javax.swing.JMenuItem();
         PJuridica = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        menConsultarPF = new javax.swing.JMenuItem();
+        menConsultarPJ = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenuItem2.setText("jMenuItem2");
+
+        jMenuItem4.setText("jMenuItem4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Projeto Integrador III B - ADS UCPel");
-        setPreferredSize(new java.awt.Dimension(700, 600));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/pi002/controle/logo-ucpel.png"))); // NOI18N
 
@@ -134,6 +139,21 @@ public class Start extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu4.setText("Consultar");
+
+        menConsultarPF.setText("P. Física");
+        menConsultarPF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menConsultarPFActionPerformed(evt);
+            }
+        });
+        jMenu4.add(menConsultarPF);
+
+        menConsultarPJ.setText("P. Jurídica");
+        jMenu4.add(menConsultarPJ);
+
+        jMenuBar1.add(jMenu4);
+
         jMenu3.setText("Sobre");
         jMenuBar1.add(jMenu3);
 
@@ -161,7 +181,6 @@ public class Start extends javax.swing.JFrame {
        Desktop.add(tela);
        tela.show();
        
-    //    new viewPF().setVisible(true);
     }//GEN-LAST:event_PFisicaActionPerformed
 
     private void PJuridicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PJuridicaActionPerformed
@@ -169,11 +188,6 @@ public class Start extends javax.swing.JFrame {
        Desktop.add(tela);
        tela.setVisible(true);
     
-    //    viewPJ tela;
-    //    form.abrirFormulario(tela = new viewPJ(), Desktop);
-    
-    //    new TelaJuridica().setVisible(true);
-        
     }//GEN-LAST:event_PJuridicaActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
@@ -181,6 +195,16 @@ public class Start extends javax.swing.JFrame {
         Start.this.dispose();
 
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void menConsultarPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menConsultarPFActionPerformed
+
+       viewConsultaPF tela = new viewConsultaPF();
+       Desktop.add(tela);
+       tela.show();
+       
+       // Fazer um loop para imprimir o ArrayList
+
+    }//GEN-LAST:event_menConsultarPFActionPerformed
 
     /**
      * @param args the command line arguments
@@ -228,8 +252,14 @@ public class Start extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenuItem menConsultarPF;
+    private javax.swing.JMenuItem menConsultarPJ;
     // End of variables declaration//GEN-END:variables
 }
