@@ -146,7 +146,7 @@ public class viewPJ extends javax.swing.JInternalFrame {
 
         System.out.println(j);
 
-        JOptionPane.showMessageDialog(this, "Contato cadastrado com sucesso!");
+        JOptionPane.showMessageDialog(this, "Contato de Pessoa Jurídica cadastrado com sucesso!");
 
         viewPJ.this.dispose();
     }//GEN-LAST:event_btnSalvarActionPerformed

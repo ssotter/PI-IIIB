@@ -139,7 +139,7 @@ public class viewPF extends javax.swing.JInternalFrame {
         
         System.out.println(f);
         
-        JOptionPane.showMessageDialog(this, "Contato cadastrado com sucesso!");
+        JOptionPane.showMessageDialog(this, "Contato de Pessoa Física cadastrado com sucesso!");
         
         viewPF.this.dispose();
 
